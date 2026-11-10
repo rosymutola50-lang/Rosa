@@ -54,6 +54,15 @@ th,td{padding:.6rem .8rem;border-bottom:1px solid var(--soft)}
 .ph{width:100%;max-height:300px;object-fit:cover;border-radius:16px;margin:.8rem 0;display:block;box-shadow:0 3px 14px #0002}
 details{background:var(--card);border-radius:12px;padding:.8rem 1rem;margin:.6rem 0;box-shadow:0 2px 8px #0001}
 summary{cursor:pointer;font-weight:700;color:var(--c1)}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1rem 0}
+.gal figure{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 3px 14px #0f4c811a}
+.gal img{width:100%;height:210px;object-fit:cover;display:block;cursor:zoom-in}
+.gal figcaption,figure.fg figcaption{padding:.6rem .8rem;font-size:.9rem}
+figure.fg{background:var(--card);border-radius:16px;overflow:hidden;box-shadow:0 3px 14px #0f4c811a;margin:1rem 0}
+figure.fg img{width:100%;max-height:480px;object-fit:cover;display:block}
+#lb{display:none;position:fixed;inset:0;background:#000d;z-index:50;align-items:center;justify-content:center;padding:1rem;cursor:zoom-out}
+#lb.on{display:flex}
+#lb img{max-width:100%;max-height:100%;border-radius:8px}
 footer{text-align:center;padding:1.5rem 1rem;background:#0d2238;color:#d6e6f7;font-size:.9rem}
 @media(max-width:720px){
 #tg{display:block}
@@ -69,7 +78,7 @@ nav.open{display:flex}
 <span class="logo">🏫 Memória Marien Ngouabi</span>
 <button id="tg" aria-label="Abrir menu">☰</button>
 <nav id="nav">
-<a href="#inicio">Início</a><a href="#introducao">Introdução</a><a href="#objectivos">Objectivos</a><a href="#desenvolvimento">Desenvolvimento</a><a href="#cronologia">Cronologia</a><a href="#propostas">Propostas</a><a href="#conclusao">Conclusão</a><a href="#referencias">Referências</a><a href="#grupo">Grupo</a>
+<a href="#inicio">Início</a><a href="#introducao">Introdução</a><a href="#objectivos">Objectivos</a><a href="#desenvolvimento">Desenvolvimento</a><a href="#cronologia">Cronologia</a><a href="#galeria">Galeria</a><a href="#propostas">Propostas</a><a href="#conclusao">Conclusão</a><a href="#referencias">Referências</a><a href="#grupo">Grupo</a>
 </nav>
 </div>
 </header>
@@ -103,7 +112,7 @@ nav.open{display:flex}
 <div class="card"><h3>🌍 Um nome africano</h3><p>Homenagem a Marien Ngouabi, antigo presidente da República do Congo.</p></div>
 <div class="card"><h3>📈 Evolução</h3><p>Primária Completa, anexa da Escola Joaquim Chissano e, por fim, Escola Secundária.</p></div>
 </div>
-<img class="ph" src="imagens/foto-escola.jpg" alt="Fotografia da Escola Secundária Marien Ngouabi" loading="lazy" onerror="this.style.display='none'">
+<img class="ph" src="imagens/foto-escola.jpg" alt="Pátio da Escola Secundária Marien Ngouabi, com as salas de aula ao fundo" loading="lazy" onerror="this.style.display='none'">
 <div class="quote">A escola é um património histórico e social da comunidade, cuja memória merece ser preservada e transmitida às futuras gerações.</div>
 </section>
 
@@ -210,6 +219,28 @@ nav.open{display:flex}
 <div class="note">⚠️ Grupo: o estudo consultado não confirma o dia em que a escola comemora o seu aniversário. Confirmem a data oficial e os nomes dos primeiros responsáveis com a Direcção da escola, juntem aqui a informação e apaguem esta nota.</div>
 </section>
 
+<!-- GALERIA -->
+<section class="page" id="galeria">
+<h2>Galeria de fotografias</h2>
+<p>Registos da Escola Secundária Marien Ngouabi, em Xai-Xai. Toca numa imagem para ampliar.</p>
+<h3>Com o pedagógico da escola</h3>
+<div class="gal">
+<figure><img src="imagens/grupo-pedagogico-1.jpg" alt="Alunas do grupo com o pedagógico Sarmento Monjane, no pátio da escola" loading="lazy"><figcaption>Alunas do grupo com o pedagógico da escola, Sarmento Monjane.</figcaption></figure>
+<figure><img src="imagens/grupo-pedagogico-2.jpg" alt="Alunas do grupo com o pedagógico Sarmento Monjane, no pátio da escola" loading="lazy"><figcaption>Outro momento da visita, com o pedagógico Sarmento Monjane.</figcaption></figure>
+<figure><img src="imagens/grupo-pedagogico-3.jpg" alt="Alunas do grupo com o pedagógico Sarmento Monjane, em formato vertical" loading="lazy"><figcaption>Fotografia de grupo com o pedagógico Sarmento Monjane.</figcaption></figure>
+</div>
+<h3>A escola</h3>
+<div class="gal">
+<figure><img src="imagens/placa-escola.jpg" alt="Fachada com o emblema e o nome Escola Secundária Marien Ngouabi" loading="lazy"><figcaption>Fachada com o emblema e o nome da escola.</figcaption></figure>
+<figure><img src="imagens/edificio-escola.jpg" alt="Bloco de salas de aula visto do pátio" loading="lazy"><figcaption>Bloco de salas de aula e pátio.</figcaption></figure>
+<figure><img src="imagens/foto-escola.jpg" alt="Pátio com árvores, salas 11 e 12 e edifício administrativo" loading="lazy"><figcaption>Pátio e salas 11 e 12.</figcaption></figure>
+<figure><img src="imagens/patio-1.jpg" alt="Pátio da escola com árvores e salas de aula" loading="lazy"><figcaption>Pátio sombreado, entre as salas de aula.</figcaption></figure>
+<figure><img src="imagens/patio-2.jpg" alt="Árvores no pátio e salas de aula ao fundo" loading="lazy"><figcaption>Árvores do pátio e salas de aula.</figcaption></figure>
+<figure><img src="imagens/patio-3.jpg" alt="Pátio da escola visto da varanda, com palmeira ao fundo" loading="lazy"><figcaption>Pátio visto da varanda.</figcaption></figure>
+</div>
+<div class="note">📌 Créditos: fotografias do arquivo do grupo (Outubro e Novembro de 2026). A imagem da fachada é uma captura de reportagem televisiva; confirmem e indiquem o crédito antes de apresentar.</div>
+</section>
+
 <!-- PROPOSTAS -->
 <section class="page" id="propostas">
 <h2>Propostas e recomendações</h2>
@@ -256,6 +287,7 @@ nav.open{display:flex}
 <div class="card"><h3>Turma / Classe</h3><p>[ex.: 12.ª classe, turma A02]</p></div>
 <div class="card"><h3>Professor(a)</h3><p>[Nome do professor(a)]</p></div>
 </div>
+<figure class="fg"><img src="imagens/grupo-pedagogico-1.jpg" alt="Alunas do grupo com o pedagógico Sarmento Monjane" loading="lazy"><figcaption>O grupo com o pedagógico da escola, Sarmento Monjane.</figcaption></figure>
 <h3>Membros</h3>
 <ol><li>[Nome completo]</li><li>[Nome completo]</li><li>[Nome completo]</li><li>[Nome completo]</li></ol>
 </section>
@@ -278,6 +310,10 @@ window.addEventListener('hashchange',show);
 document.getElementById('tg').addEventListener('click',function(){nav.classList.toggle('open')});
 show();
 })();
+</script>
+<div id="lb"><img alt=""></div>
+<script>
+(function(){var lb=document.getElementById("lb"),im=lb.querySelector("img");document.querySelectorAll(".gal img").forEach(function(i){i.addEventListener("click",function(){im.src=i.src;im.alt=i.alt;lb.classList.add("on")})});lb.addEventListener("click",function(){lb.classList.remove("on")});document.addEventListener("keydown",function(e){if(e.key==="Escape")lb.classList.remove("on")})})();
 </script>
 <noscript><style>.page{display:block!important}</style></noscript>
 </body>
